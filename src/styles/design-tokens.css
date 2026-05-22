@@ -1,0 +1,42 @@
+/* === Design Tokens: WSB a5b5c5d5 === */
+:root {
+  /* Neutral palette */
+  --color-bg:             oklch(0.98 0.005 240);
+  --color-text-primary:   oklch(0.14 0.01  240);
+  --color-text-secondary: oklch(0.44 0.01  240);
+
+  /* Accent */
+  --color-cta:            oklch(0.52 0.19  241);
+
+  /* Table / separator */
+  --color-table-line:     oklch(0.86 0.005 240);
+
+  /* Typography */
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Type scale ratio 1.25 */
+  --text-sm:   0.8rem;
+  --text-base: 1rem;
+  --text-lg:   1.25rem;
+  --text-xl:   1.5625rem;
+  --text-2xl:  1.953rem;
+  --text-3xl:  2.441rem;
+  --text-4xl:  clamp(2rem, 4vw + 1rem, 3.052rem);
+
+  /* Spacing (4px base) */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+}
