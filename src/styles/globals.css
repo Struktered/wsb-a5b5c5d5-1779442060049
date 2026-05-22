@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "./design-tokens.css";
+
+@theme {
+  --color-bg:             oklch(0.98 0.005 240);
+  --color-text-primary:   oklch(0.14 0.01  240);
+  --color-text-secondary: oklch(0.44 0.01  240);
+  --color-cta:            oklch(0.52 0.19  241);
+  --color-table-line:     oklch(0.86 0.005 240);
+  --font-family-body:     'IBM Plex Sans', sans-serif;
+  --font-family-mono:     'IBM Plex Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
