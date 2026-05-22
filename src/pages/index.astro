@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DashboardRealansicht from '../components/DashboardRealansicht.astro';
+import Funktionsreferenz from '../components/Funktionsreferenz.astro';
+import Systemvoraussetzungen from '../components/Systemvoraussetzungen.astro';
+import Betriebskennzahlen from '../components/Betriebskennzahlen.astro';
+import DemoBuchung from '../components/DemoBuchung.tsx';
+---
+<BaseLayout
+  title="Brain UI: Echtzeit-Disposition fuer Logistik"
+  description="Brain UI ist das Dispositions-Dashboard fuer moderne Logistikbetriebe: Echtzeit-Flottentelemetrie, Routenoptimierung und Fahrermanagement in einer Ansicht."
+>
+  <main>
+    <DashboardRealansicht />
+    <Funktionsreferenz />
+    <Systemvoraussetzungen />
+    <Betriebskennzahlen />
+    <DemoBuchung client:visible />
+  </main>
+</BaseLayout>
