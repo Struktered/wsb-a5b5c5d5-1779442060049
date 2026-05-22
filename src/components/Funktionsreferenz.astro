@@ -1,0 +1,58 @@
+---
+import SectionWrapper from './shared/SectionWrapper.astro';
+
+const funktionen = [
+  {
+    titel: 'Echtzeit-Disposition',
+    beschreibung: 'Auftraege und Fahrzeuge werden in einer einheitlichen Ansicht zusammengefuehrt, ohne Seitenwechsel oder manuelle Aktualisierung.',
+  },
+  {
+    titel: 'Routenoptimierung',
+    beschreibung: 'Der Planungsalgorithmus berechnet effiziente Touren unter Beruecksichtigung von Zeitfenstern, Fahrzeugkapazitaeten und aktuellen Strassenzustaenden.',
+  },
+  {
+    titel: 'Flottentelemetrie',
+    beschreibung: 'GPS-Positionen und Fahrzeugstatus aktualisieren sich im Sekundentakt direkt im Dashboard; kein separates Tracking-Portal erforderlich.',
+  },
+  {
+    titel: 'Fahrermanagement',
+    beschreibung: 'Schichtplanung, Qualifikationen und Verfuegbarkeiten werden zentral gepflegt und bei jeder Dispositionsentscheidung automatisch beruecksichtigt.',
+  },
+  {
+    titel: 'Sendungsverfolgung',
+    beschreibung: 'Kunden erhalten automatisierte Statusmeldungen; intern laeuft jede Zustellung in einer lueckenlosen Protokollkette mit Zeitstempeln.',
+  },
+];
+---
+<SectionWrapper id="funktionsreferenz" ariaLabelledby="funktionsreferenz-heading">
+  <div class="py-16 md:py-24">
+    <h2
+      id="funktionsreferenz-heading"
+      class="font-medium mb-10"
+      style="font-size: var(--text-2xl); color: var(--color-text-primary);"
+    >
+      Funktionsreferenz
+    </h2>
+    <dl style="border-top: 1px solid var(--color-table-line);">
+      {funktionen.map((fn) => (
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 py-5"
+          style="border-bottom: 1px solid var(--color-table-line);"
+        >
+          <dt
+            class="font-medium"
+            style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary);"
+          >
+            {fn.titel}
+          </dt>
+          <dd
+            class="md:col-span-2"
+            style="font-size: var(--text-base); color: var(--color-text-secondary);"
+          >
+            {fn.beschreibung}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</SectionWrapper>
