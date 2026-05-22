@@ -1,0 +1,31 @@
+---
+import CTADemoButton from './shared/CTADemoButton.tsx';
+import SectionWrapper from './shared/SectionWrapper.astro';
+---
+<SectionWrapper id="dashboard-realansicht" ariaLabelledby="dashboard-heading">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-16 md:py-24">
+    <div class="flex flex-col gap-6">
+      <h1
+        id="dashboard-heading"
+        class="font-medium leading-tight"
+        style="font-size: var(--text-4xl); color: var(--color-text-primary);"
+      >
+        Brain UI
+      </h1>
+      <div>
+        <CTADemoButton client:load />
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <img
+        src="/assets/dashboard-screenshot.png"
+        alt="Brain UI Dispositions-Dashboard auf Desktop-Monitor: Echtzeit-Karte mit Fahrzeugpositionen und Auftragsqueue"
+        class="w-full object-cover"
+        width="1280"
+        height="800"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
+</SectionWrapper>
