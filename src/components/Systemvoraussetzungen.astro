@@ -1,0 +1,75 @@
+---
+import SectionWrapper from './shared/SectionWrapper.astro';
+
+const anforderungen = [
+  {
+    kategorie: 'Browser',
+    wert: 'Chrome 120+, Firefox 121+, Edge 120+, Safari 17+',
+  },
+  {
+    kategorie: 'Netzwerk',
+    wert: 'Min. 5 Mbit/s symmetrisch; WebSocket-Port 443 muss offen sein',
+  },
+  {
+    kategorie: 'Aufloesung',
+    wert: 'Min. 1280 x 768 px; optimiert fuer 1920 x 1080 px und groesser',
+  },
+  {
+    kategorie: 'API-Integration',
+    wert: 'REST/JSON; OAuth 2.0 Bearer Token; TLS 1.2 oder hoeher erforderlich',
+  },
+  {
+    kategorie: 'Datenhaltung',
+    wert: 'Cloud-SaaS, EU-Region; kein lokaler Installationsaufwand',
+  },
+];
+---
+<SectionWrapper id="systemvoraussetzungen" ariaLabelledby="systemvoraussetzungen-heading">
+  <div class="py-16 md:py-24">
+    <h2
+      id="systemvoraussetzungen-heading"
+      class="font-medium mb-10"
+      style="font-size: var(--text-2xl); color: var(--color-text-primary);"
+    >
+      Systemvoraussetzungen
+    </h2>
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr style="border-bottom: 1px solid var(--color-table-line);">
+          <th
+            scope="col"
+            class="pb-3 pr-8 font-medium"
+            style="font-size: var(--text-sm); color: var(--color-text-secondary); white-space: nowrap;"
+          >
+            Kategorie
+          </th>
+          <th
+            scope="col"
+            class="pb-3 font-medium"
+            style="font-size: var(--text-sm); color: var(--color-text-secondary);"
+          >
+            Anforderung
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {anforderungen.map((a) => (
+          <tr style="border-bottom: 1px solid var(--color-table-line);">
+            <td
+              class="py-4 pr-8 align-top font-medium"
+              style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-primary); white-space: nowrap;"
+            >
+              {a.kategorie}
+            </td>
+            <td
+              class="py-4 align-top"
+              style="font-size: var(--text-base); color: var(--color-text-secondary);"
+            >
+              {a.wert}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</SectionWrapper>
